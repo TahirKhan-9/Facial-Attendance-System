@@ -1,0 +1,262 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|i:\\fahad\\face attendance latest\\face attendance department changes\\faceattendance ver 1.29  setup - full -\\faceattendance\\usercontrols\\ucadddept.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucadddept.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|i:\\fahad\\face attendance latest\\face attendance department changes\\faceattendance ver 1.29  setup - full -\\faceattendance\\usercontrols\\ucadddept.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucadddept.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ucaddstaff.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucaddstaff.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|i:\\fahad\\face attendance latest\\face attendance department changes\\faceattendance ver 1.29  setup - full -\\faceattendance\\usercontrols\\usettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\usettings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|i:\\fahad\\face attendance latest\\face attendance department changes\\faceattendance ver 1.29  setup - full -\\faceattendance\\classes\\user32api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\classes\\user32api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ucaddstaff.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucaddstaff.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ucstaffman.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucstaffman.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ucstaffman.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucstaffman.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\urealtimelog.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\urealtimelog.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\urealtimelog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\urealtimelog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ucfirebasesync.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucfirebasesync.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ucfirebasesync.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ucfirebasesync.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\usettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\usettings.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\usercontrols\\ulog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\usercontrols\\ulog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\faceattendance\\classes\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4876C326-5DAA-4B4C-9BFD-2E171DEBBEFA}|FaceAttendance\\FaceAttendance.csproj|solutionrelative:faceattendance\\classes\\firebaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "uSettings.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uSettings.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\uSettings.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uSettings.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\uSettings.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T10:58:49.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ucAddDept.xaml.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddDept.xaml.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucAddDept.xaml.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddDept.xaml.cs",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucAddDept.xaml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAawEkAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:26:22.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ucAddDept.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddDept.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucAddDept.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddDept.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucAddDept.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T10:10:58.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User32API.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\Classes\\User32API.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\Classes\\User32API.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\Classes\\User32API.cs",
+              "RelativeToolTip": "FaceAttendance\\Classes\\User32API.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T10:23:37.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ucStaffMan.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucStaffMan.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucStaffMan.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucStaffMan.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucStaffMan.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-05T10:35:59.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ucAddStaff.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddStaff.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucAddStaff.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddStaff.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucAddStaff.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-27T10:27:45.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ucStaffMan.xaml.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucStaffMan.xaml.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucStaffMan.xaml.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucStaffMan.xaml.cs",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucStaffMan.xaml.cs",
+              "ViewState": "AgIAAD8HAAAAAAAAAAAnwEUHAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:36:45.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ucAddStaff.xaml.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddStaff.xaml.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucAddStaff.xaml.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucAddStaff.xaml.cs",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucAddStaff.xaml.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAQwJcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:36:45.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "uSettings.xaml.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uSettings.xaml.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\uSettings.xaml.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uSettings.xaml.cs",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\uSettings.xaml.cs",
+              "ViewState": "AgIAAF4DAAAAAAAAAAAiwHIDAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:36:45.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "uRealTimeLog.xaml.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uRealTimeLog.xaml.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\uRealTimeLog.xaml.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uRealTimeLog.xaml.cs",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\uRealTimeLog.xaml.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAADwvx4BAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T14:04:19.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "uRealTimeLog.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uRealTimeLog.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\uRealTimeLog.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uRealTimeLog.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\uRealTimeLog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-27T08:28:11.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "uLog.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uLog.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\uLog.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\uLog.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\uLog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-27T08:27:18.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ucFirebaseSync.xaml.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucFirebaseSync.xaml.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucFirebaseSync.xaml.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucFirebaseSync.xaml.cs",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucFirebaseSync.xaml.cs",
+              "ViewState": "AgIAAFUBAAAAAAAAAAAUwGgBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T08:21:48.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ucFirebaseSync.xaml",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucFirebaseSync.xaml",
+              "RelativeDocumentMoniker": "FaceAttendance\\UserControls\\ucFirebaseSync.xaml",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\UserControls\\ucFirebaseSync.xaml",
+              "RelativeToolTip": "FaceAttendance\\UserControls\\ucFirebaseSync.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-27T05:52:12.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FirebaseService.cs",
+              "DocumentMoniker": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\Classes\\FirebaseService.cs",
+              "RelativeDocumentMoniker": "FaceAttendance\\Classes\\FirebaseService.cs",
+              "ToolTip": "I:\\Fahad\\Face Attendance Latest\\Face Attendance Department Changes\\FaceAttendance ver 1.29  Setup - Full -\\FaceAttendance\\Classes\\FirebaseService.cs",
+              "RelativeToolTip": "FaceAttendance\\Classes\\FirebaseService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVDhPYxgFCHDh4YX/sQtj/6u3qP9XblL\u002BHzk/8j9UiuHtx7f/VZpVwHxkNggwgohLjy79D18SzmAua86QZJbEwM/Bz3D91XWGCNMIRpAGo34jsGJkwMrMynCn9g5YP0PK0pT/3tO9/3/58gVuMjLA5wImEHH68WkGN3U3Bh4eHoiJJACwAb/\u002B/gI7CRuAeeH3398M8g3ycDayKxjC5oX9D54TjNX5IIDPC2Ann7x78n/E4ggGDw0PhgiDCLBrLj2/xJBhl0HQS3AFe67t\u002BT/lyBSGO2/uMHCxcTHYK9szdAd2kxwmIw8wMAAAESl0qwYO77cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-02-27T05:52:06.212Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

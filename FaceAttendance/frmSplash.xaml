@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="FaceAttendance.frmSplash"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:gif="http://wpfanimatedgif.codeplex.com"
+    xmlns:local="clr-namespace:FaceAttendance"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Processing Form"
+    Width="300"
+    Height="170"
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="Segoe UI Emoji"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid Name="MainGrid">
+        <Border
+            BorderBrush="{StaticResource HIK}"
+            BorderThickness="2"
+            CornerRadius="10"
+            Loaded="splashL">
+            <Border.Background>
+                <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#fafafa" />
+                    <!--<GradientStop Color="#253b80" Offset="1"/>
+                    <GradientStop Color="#3f5db9" Offset="0.546"/>-->
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <DockPanel VerticalAlignment="Center">
+            <StackPanel Margin="10">
+                <TextBlock Margin="0,20,0,0" HorizontalAlignment="Center">
+                    <TextBlock Margin="0,0,0,5">
+                        <Image
+                            x:Name="retryImg"
+                            Width="95"
+                            Height="53"
+                            gif:ImageBehavior.AnimatedSource="/Images/loading.gif" />
+                    </TextBlock>
+                </TextBlock>
+                <Label
+                    Name="lblProcessing"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Center"
+                    Content="Starting..."
+                    FontSize="15"
+                    Foreground="{StaticResource HIK}" />
+
+            </StackPanel>
+
+
+        </DockPanel>
+    </Grid>
+
+</Window>

@@ -1,0 +1,199 @@
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\MainWindow.g.cs
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\App.g.cs
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.cache
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.lref
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\FaceAttendance.exe.config
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\FaceAttendance.exe
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\FaceAttendance.pdb
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\MaterialDesignColors.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\App.baml
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\MainWindow.baml
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.g.resources
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.Properties.Resources.resources
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.csproj.GenerateResource.cache
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.csproj.CoreCompileInputs.cache
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.csproj.CopyComplete
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.exe
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.pdb
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\AxInterop.FPCLOCK_SVRLib.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\AxInterop.FP_CLOCKLib.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\IPAddressControlLib.dll
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\bin\Debug\IPAddressControlLib.pdb
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\DeviceManagement.g.cs
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\DeviceManagement.baml
+C:\Users\Koha\source\repos\FaceAttendance\FaceAttendance\obj\Debug\FaceAttendance.csprojAssemblyReference.cache
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\FaceAttendance.csproj.AssemblyReference.cache
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\Window1.baml
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\Forms\MessageBoxWindow.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\frmSplash.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\Window1.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\App.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.cache
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.lref
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\FaceAttendance.exe
+U:\FaceAttendance Versions\FaceAttendance ver 1.14\FaceAttendance\obj\Debug\FaceAttendance.pdb
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\Interop.FPCLOCK_SVRLib.dll
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\Interop.FP_CLOCKLib.dll
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.csproj.ResolveComReference.cache
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\DeviceManagement.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\MessageBoxWindow.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\master_splash.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucAddStaff.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucShifts.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucStaffMan.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\frmSplash.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\MainWindow.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucDev.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\uLog.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\uRealTimeLog.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\UserControls\uSettings.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\App.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance_Content.g.cs
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.cache
+U:\FaceAttendance Versions\FaceAttendance ver 1.24 Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.lref
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.csproj.AssemblyReference.cache
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.EMFGENLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.FPCLOCK_SVRLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.FP_CLOCKLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.PAGEOBJECTMODELLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.PROMPTINGLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.SAXSERIALIZELib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\Interop.VLELib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.csproj.ResolveComReference.cache
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\MessageBoxWindow.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\test.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\LoadingWindow.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucAddDept.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucAddStaff.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucCustomShift.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucFirebaseSync.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucLogsMigration.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucReports.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\frmSplash.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\App.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance_Content.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.cache
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance_MarkupCompile.lref
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\FaceAttendance.exe.config
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\FaceAttendance.exe
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\FaceAttendance.pdb
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\AForge.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\AForge.Video.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\AxInterop.FPCLOCK_SVRLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\AxInterop.FP_CLOCKLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.Data.AdoDotNetInterop.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.ReportSource.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.Shared.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.Web.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\CrystalDecisions.Windows.Forms.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\EPPlus.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\EPPlus.Interfaces.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\EPPlus.System.Drawing.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Firebase.Database.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\FontAwesome.WPF.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\MaterialIcons.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Microsoft.SqlServer.Smo.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Newtonsoft.Json.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\SAPBusinessObjects.WPF.Viewer.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.Core.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.Interfaces.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.Linq.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.PlatformServices.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Regex.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\WpfAnimatedGif.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Xceed.Wpf.Toolkit.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Interop.FPCLOCK_SVRLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Interop.FP_CLOCKLib.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\AForge.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\AForge.Video.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\EPPlus.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\FontAwesome.WPF.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\Newtonsoft.Json.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.Core.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.Interfaces.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.Linq.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\System.Reactive.PlatformServices.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\WpfAnimatedGif.pdb
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\WpfAnimatedGif.xml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\DeviceManagement.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\master_splash.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucShifts.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucStaffMan.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\MainWindow.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucDev.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucTimeSlots.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\uLog.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\uRealTimeLog.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\uSettings.g.cs
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\App.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\DeviceManagement.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\MessageBoxWindow.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\master_splash.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\test.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\LoadingWindow.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucAddDept.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucAddStaff.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucCustomShift.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucFirebaseSync.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucLogsMigration.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucReports.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucShifts.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucStaffMan.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\frmSplash.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\MainWindow.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucDev.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\ucTimeSlots.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\uLog.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\uRealTimeLog.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\UserControls\uSettings.baml
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.g.resources
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.Properties.Resources.resources
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.csproj.GenerateResource.cache
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.csproj.CoreCompileInputs.cache
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAtte.D7DBD10C.Up2Date
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.exe
+I:\Fahad\Face Attendance Latest\Face Attendance Department Changes\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\Debug\FaceAttendance.pdb

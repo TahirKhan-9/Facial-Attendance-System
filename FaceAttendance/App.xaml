@@ -1,0 +1,440 @@
+﻿<Application
+    x:Class="FaceAttendance.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:FaceAttendance"
+    StartupUri="frmSplash.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Purple.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+
+
+
+            <Style x:Key="RoundButtonTemplate" TargetType="Button">
+                <Setter Property="Background" Value="Brown" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="1"
+                                CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Brush x:Key="HIK">#2aaed1</Brush>
+            <Color x:Key="HIKC">#4d40bf</Color>
+            <Brush x:Key="VISION">#9F9E9D</Brush>
+            <Color x:Key="VISIONC">#71706E</Color>
+            <Brush x:Key="HEADER">#494848</Brush>
+            <Brush x:Key="FREE">#7A7575</Brush>
+            <Brush x:Key="Close">#cb1200</Brush>
+            <Color x:Key="CloseC">#cb1200</Color>
+            <Brush x:Key="Minimize">#424242</Brush>
+
+            <Brush x:Key="Alert">#EF900F</Brush>
+            <Color x:Key="AlertC">#EF900F</Color>
+            <Brush x:Key="Info">#87ACF0</Brush>
+            <Color x:Key="InfoC">#87ACF0</Color>
+            <Brush x:Key="Success">#0FB636</Brush>
+            <Color x:Key="SuccessC">#0FB636</Color>
+
+            <Color x:Key="BACKGROUND">#FAFAFA</Color>
+            <Color x:Key="RoundBack">#00C9C4C4</Color>
+            <Color x:Key="FieldBackground">#1271706E</Color>
+
+            <Style x:Key="CustomeFont">
+                <Setter Property="TextElement.FontFamily" Value="Fonts/#Bungee Shade" />
+            </Style>
+
+            <Style x:Key="3DButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Grid Margin="0" Background="Transparent">
+                                <Border
+                                    x:Name="Border1"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop x:Name="g1" Offset="1" Color="#1E8FFF" />
+                                            <GradientStop x:Name="g2" Offset="0" Color="#237BCF" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border
+                                    x:Name="Border2"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#1E8FFF" />
+                                            <GradientStop Offset="1" Color="#237BCF" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+
+                                <!--<Border
+                                x:Name="Border3"
+                                BorderThickness="1,0,0,1"
+                                CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#709FCE" />
+                                            <GradientStop Offset="1" Color="#567695" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>-->
+
+
+                                <ContentPresenter Margin="{TemplateBinding Padding}" />
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="Border2" Property="Visibility" Value="Hidden" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                    <!--<Setter TargetName="Border3" Property="Visibility" Value="Hidden" />-->
+                                    <!--<Setter Value="#4479AE" Property="Background" />-->
+                                    <!--<Setter Value="#E5EAEF" Property="Foreground" />-->
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <Style x:Key="ButtonStyleGrey" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Grid Margin="0" Background="Transparent">
+                                <Border
+                                    x:Name="Border1"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop x:Name="g1" Offset="1" Color="#9F9E9D" />
+                                            <GradientStop x:Name="g2" Offset="0" Color="#8F8F8F" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border
+                                    x:Name="Border2"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#9F9E9D" />
+                                            <GradientStop Offset="1" Color="#8F8F8F" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+
+                                <!--<Border
+                                x:Name="Border3"
+                                BorderThickness="1,0,0,1"
+                                CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#709FCE" />
+                                            <GradientStop Offset="1" Color="#567695" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>-->
+
+
+                                <ContentPresenter Margin="{TemplateBinding Padding}" />
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="Border2" Property="Visibility" Value="Hidden" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                    <!--<Setter TargetName="Border3" Property="Visibility" Value="Hidden" />-->
+                                    <!--<Setter Value="#4479AE" Property="Background" />-->
+                                    <!--<Setter Value="#E5EAEF" Property="Foreground" />-->
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="ButtonStylerisal" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Grid Margin="0" Background="Transparent">
+                                <Border
+                                    x:Name="Border1"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop x:Name="g1" Offset="1" Color="#3070B8" />
+                                            <GradientStop x:Name="g2" Offset="0" Color="#3070B8" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border
+                                    x:Name="Border2"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#3070B8" />
+                                            <GradientStop Offset="1" Color="#3070B8" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+
+                                <!--<Border
+                                x:Name="Border3"
+                                BorderThickness="1,0,0,1"
+                                CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#709FCE" />
+                                            <GradientStop Offset="1" Color="#567695" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>-->
+
+
+                                <ContentPresenter Margin="{TemplateBinding Padding}" />
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="Border2" Property="Visibility" Value="Hidden" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                    <!--<Setter TargetName="Border3" Property="Visibility" Value="Hidden" />-->
+                                    <!--<Setter Value="#4479AE" Property="Background" />-->
+                                    <!--<Setter Value="#E5EAEF" Property="Foreground" />-->
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ButtonStyleLBlue" TargetType="{x:Type Button}">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Grid Margin="0" Background="Transparent">
+                                <Border
+                                    x:Name="Border1"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop x:Name="g1" Offset="1" Color="#2aaed1" />
+                                            <GradientStop x:Name="g2" Offset="0" Color="#289FBE" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                                <Border
+                                    x:Name="Border2"
+                                    BorderThickness="1,0,0,1"
+                                    CornerRadius="3,3,3,3">
+
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#2aaed1" />
+                                            <GradientStop Offset="1" Color="#289FBE" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+
+                                <!--<Border
+                                x:Name="Border3"
+                                BorderThickness="1,0,0,1"
+                                CornerRadius="3,3,3,3">
+                                    <Border.Background>
+                                        <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#709FCE" />
+                                            <GradientStop Offset="1" Color="#567695" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>-->
+
+
+                                <ContentPresenter Margin="{TemplateBinding Padding}" />
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="Border2" Property="Visibility" Value="Hidden" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                    <!--<Setter TargetName="Border3" Property="Visibility" Value="Hidden" />-->
+                                    <!--<Setter Value="#4479AE" Property="Background" />-->
+                                    <!--<Setter Value="#E5EAEF" Property="Foreground" />-->
+
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <Style x:Key="textboxflat" TargetType="TextBox">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                            <Border
+                                Padding="2"
+                                Background="#19212F"
+                                BorderBrush="Red"
+                                BorderThickness="1"
+                                CornerRadius="2">
+                                <ScrollViewer x:Name="PART_ContentHost" Margin="0" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Color x:Key="detailMark">#FFA1A9B3</Color>
+            <SolidColorBrush x:Key="detailMarkBrush" Color="{StaticResource ResourceKey=detailMark}" />
+            <Style x:Key="flatTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Grid>
+                                <Rectangle Stroke="{StaticResource ResourceKey=detailMarkBrush}" StrokeThickness="1" />
+                                <TextBox
+                                    Margin="1"
+                                    BorderThickness="0"
+                                    Text="{TemplateBinding Text}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <Style TargetType="TextBox">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Grid>
+                                <Border
+                                    x:Name="border"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    SnapsToDevicePixels="True">
+                                    <ScrollViewer
+                                        x:Name="PART_ContentHost"
+                                        Focusable="false"
+                                        HorizontalScrollBarVisibility="Hidden"
+                                        VerticalScrollBarVisibility="Hidden" />
+                                </Border>
+                            </Grid>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter TargetName="border" Property="Opacity" Value="0.56" />
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="#FF7EB4EA" />
+                                </Trigger>
+                                <Trigger Property="IsFocused" Value="true">
+                                    <Setter TargetName="border" Property="BorderBrush" Value="#0CA3B9" />
+                                    <!--  #12E87D#0BF7F5  -->
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <BooleanToVisibilityConverter x:Key="MyBoolToVisibilityConverter" />
+
+            <!--<ControlTemplate x:Key="hints" TargetType="Button">
+                <Grid>
+                    <Grid.Resources>
+            -->
+            <!--  Define look / layout for both TextBoxes here. I applied custom Padding and BorderThickness for my application  -->
+            <!--
+                        <Style TargetType="TextBox">
+                            <Setter Property="Padding" Value="4" />
+                            <Setter Property="BorderThickness" Value="2" />
+                        </Style>
+                    </Grid.Resources>
+
+                    <TextBox x:Name="TbSearch" />
+                    <TextBox
+                        x:Name="TbHint"
+                        Focusable="False"
+                        Foreground="LightGray"
+                        IsHitTestVisible="False"
+                        Text="Suche"
+                        Visibility="Hidden" />
+                </Grid>
+
+                <ControlTemplate.Triggers>
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition SourceName="TbSearch" Property="Text" Value="{x:Static sys:String.Empty}" />
+                            <Condition SourceName="TbSearch" Property="IsKeyboardFocused" Value="False" />
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter TargetName="TbHint" Property="Visibility" Value="Visible" />
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+
+                    <MultiTrigger>
+                        <MultiTrigger.Conditions>
+                            <Condition SourceName="TbSearch" Property="Text" Value="{x:Null}" />
+                            <Condition SourceName="TbSearch" Property="IsKeyboardFocused" Value="False" />
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.Setters>
+                            <Setter TargetName="TbHint" Property="Visibility" Value="Visible" />
+                        </MultiTrigger.Setters>
+                    </MultiTrigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>-->
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

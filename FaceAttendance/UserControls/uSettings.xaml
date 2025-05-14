@@ -1,0 +1,869 @@
+﻿<UserControl
+    x:Class="FaceAttendance.UserControls.uSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FaceAttendance.UserControls"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:nt="clr-namespace:AxFP_CLOCKLib;assembly=AxInterop.FP_CLOCKLib"
+    MinHeight="585"
+    d:DesignWidth="1024"
+    mc:Ignorable="d" Height="700">
+    <Grid Name="MainGrid">
+
+        <StackPanel Margin="0,0,0,0" DockPanel.Dock="Top">
+            <StackPanel>
+                <Label
+                    Margin="0,0,0,0"
+                    Content="Settings"
+                    FontSize="20"
+                    Foreground="#2b7dbc" />
+
+                <Canvas
+                    Height="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <Image
+                        Name="Wait"
+                        Canvas.Left="-20"
+                        Width="60"
+                        Height="60"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Visibility="Collapsed">
+                        <Image.Source>
+                            <BitmapImage UriSource="..\Images\waitsand.png" />
+                        </Image.Source>
+                    </Image>
+                </Canvas>
+
+
+
+                <Label
+                    Width="auto"
+                    Content="Account Creation "
+                    FontSize="17"
+                    Foreground="#2b7dbc" />
+                <TextBlock Margin="0,15,10,5" HorizontalAlignment="Left">
+
+                    <Label
+                        Name="Un"
+                        Width="120"
+                        Content="UserName "
+                        FontSize="13"
+                        Foreground="Black" />
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtUn1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Enter New UserName"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtUn"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtUn1_GotFocus"
+                            IsReadOnly="True"
+                            RenderTransformOrigin="0.5,0.5">
+
+                            <TextBox.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform />
+                                    <RotateTransform Angle="-0.167" />
+                                    <TranslateTransform />
+                                </TransformGroup>
+                            </TextBox.RenderTransform>
+                        </TextBox>
+
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtUn"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        RenderTransformOrigin="0.5,0.5"
+                        Text="Enter New UserName">
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform />
+                                <SkewTransform />
+                                <RotateTransform Angle="-0.167" />
+                                <TranslateTransform />
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+
+                    </TextBox>-->
+
+
+
+
+                    <TextBlock
+                        Name="adduser"
+                        Margin="0,15,10,5"
+                        HorizontalAlignment="Center"
+                        MouseDown="enable_textbox">
+                        <Border
+                            BorderBrush="{StaticResource VISION}"
+                            BorderThickness="1,0,0,1"
+                            CornerRadius="5">
+
+
+
+                            <Image
+                                Name="AddUser"
+                                Width="50"
+                                Height="30"
+                                Margin="3,0,3,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\add_circle_outline.png" />
+                                </Image.Source>
+                            </Image>
+                            <!--<materialDesign:PackIcon
+                            Margin="3,0,3,0"
+                                Height="30"
+                                Width="50"
+                                Name="AddUser"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="AddCircleOutline"   />-->
+
+                        </Border>
+
+
+                    </TextBlock>
+
+
+                </TextBlock>
+
+                <TextBlock Margin="0,0,10,5" HorizontalAlignment="Left">
+                    <Label
+                        Name="Pass"
+                        Width="120"
+                        Content="Password "
+                        FontSize="13"
+                        Foreground="Black" />
+
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtpass1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Enter New Password"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtpass"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtpass1_GotFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtpass"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="Enter New Password" />-->
+
+                    <Label
+                        Name="cpass"
+                        Width="120"
+                        Margin="20,0,0,0"
+                        Content="Confirm Password"
+                        FontSize="13"
+                        Foreground="Black" />
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtcpass1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Enter Password Again"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtcpass"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtcpass1_GotFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtcpass"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="Enter Password Again" />-->
+
+
+                </TextBlock>
+
+
+                <StackPanel DockPanel.Dock="Top">
+                    <Button
+                        Name="btnsave"
+                        Margin="3,0,10,5"
+                        Padding="20,10"
+                        HorizontalAlignment="Right"
+                        Click="btnsave_Click"
+                        Content="Save"
+                        Focusable="True"
+                        FontSize="14"
+                        IsEnabled="False"
+                        Style="{StaticResource 3DButtonStyle}"
+                        TabIndex="6" />
+                </StackPanel>
+
+
+
+
+
+                <Label
+                    Margin="0,0,0,0"
+                    Content="Connection"
+                    FontSize="20"
+                    Foreground="#2b7dbc" />
+
+                <TextBlock
+                    Margin="0,10,10,5"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+                    <Label
+                        Width="120"
+                        Content="Machine Name "
+                        FontSize="13"
+                        Foreground="Black" />
+
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtMN1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Machine Name"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtMN"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtMN1x_GotFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtMN"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="Machine Name" />-->
+
+                    <Label
+                        Width="120"
+                        Margin="20,0,0,0"
+                        Content="SQL Instance"
+                        FontSize="13"
+                        Foreground="Black" />
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtSN1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="SQL Server Instance"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtSN"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtSN1_GotFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtSN"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="SQL Server Instance" />-->
+
+                </TextBlock>
+
+                <TextBlock Margin="0,10,10,5" HorizontalAlignment="Left">
+                    <Label
+                        Width="120"
+                        Content="UserId "
+                        FontSize="13"
+                        Foreground="Black" />
+
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtUN1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="User Name"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtUN"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtUin1_GotFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtUN"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="User Name" />-->
+
+                    <Label
+                        Width="120"
+                        Margin="20,0,0,0"
+                        Content="Password"
+                        FontSize="13"
+                        Foreground="Black" />
+
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtPwd1"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Enter Password"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtPwd"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtPwd1_GotFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtPwd"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="Enter Password" />-->
+
+                </TextBlock>
+
+
+                <TextBlock Margin="0,10,10,5" HorizontalAlignment="Center">
+
+                    <TextBlock x:Name="enableCon" MouseDown="enable_Server_controls">
+                        <Border
+                            BorderBrush="{StaticResource VISION}"
+                            BorderThickness="1,0,0,1"
+                            CornerRadius="5">
+
+
+                            <Image
+                                Name="AddConn"
+                                Width="50"
+                                Height="30"
+                                Margin="3,0,3,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\add_circle_outline.png" />
+                                </Image.Source>
+                            </Image>
+                            <!--<materialDesign:PackIcon
+                            Margin="3,0,3,0"
+                                Height="30"
+                                Width="50"
+                                Name="AddConn"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="AddCircleOutline"   />-->
+
+                        </Border>
+                    </TextBlock>
+
+                    <Button
+                        Name="btnCC"
+                        Padding="20,9"
+                        HorizontalAlignment="Right"
+                        Click="btnCC_Click"
+                        Content="Create"
+                        Focusable="True"
+                        FontSize="14"
+                        IsEnabled="False"
+                        Style="{StaticResource 3DButtonStyle}"
+                        TabIndex="6" />
+                </TextBlock>
+
+
+                <!--<StackPanel HorizontalAlignment="Stretch" Height="190" Margin="0,5,0,0">
+                -->
+                <!--  This is the hidden helper Grid which does the resizing  -->
+                <!--
+                    <Grid Visibility="Hidden">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                -->
+                <!--  This is the hidden helper Field which is used to bind to, using the "Fill" column of the helper grid  -->
+                <!--
+                        <Grid Grid.Column="0" x:Name="c1"/>
+                        <Grid Grid.Column="1" x:Name="c2"/>
+                        <Grid Grid.Column="2" x:Name="c3"/>
+                        <Grid Grid.Column="3" x:Name="c4"/>
+                        <Grid Grid.Column="4" x:Name="c5"/>
+                        <Grid Grid.Column="5" x:Name="c6"/>
+                    </Grid>
+
+                </StackPanel>-->
+
+                <StackPanel Margin="0,0,0,0">
+                    <Button
+                        Name="btnOnline"
+                        Margin="3,0,10,0"
+                        Padding="20,10"
+                        HorizontalAlignment="Right"
+                        Click="btnOnline_Click"
+                        Content="Check Online"
+                        Focusable="True"
+                        FontSize="14"
+                        Style="{StaticResource 3DButtonStyle}"
+                        TabIndex="6" />
+                </StackPanel>
+                <TextBlock Margin="0,0,0,0" HorizontalAlignment="Left">
+                    <Label
+                        Name="lbldevStatus"
+                        Content="Device Settings"
+                        FontSize="20"
+                        Foreground="#417AAB" />
+                </TextBlock>
+
+                <Grid Width="996" HorizontalAlignment="Left">
+
+                    <Button
+                        x:Name="btnGetDevTime"
+                        Width="auto"
+                        Margin="80,32,0,13"
+                        Padding="20,9"
+                        HorizontalAlignment="Left"
+                        Click="btnGetDevTime_Click"
+                        Content="Get Device Time"
+                        FontSize="14"
+                        Style="{StaticResource 3DButtonStyle}" />
+
+
+                    <Grid
+                        Width="200"
+                        Height="30"
+                        Margin="270,29,516,10"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtdevId1"
+                            Width="200"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Machine Id"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtdevId"
+                            Width="200"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtdevId1_GotFocus"
+                            IsReadOnly="False" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtdevId"
+                        Height="30"
+                        Margin="270,29,516,10"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="False"
+                        Text="Machine Id" />-->
+                    <Button
+                        x:Name="btnSetDevTime"
+                        Width="auto"
+                        Margin="0,32,40,13"
+                        Padding="20,9"
+                        HorizontalAlignment="Right"
+                        Click="btnSetDevTime_Click"
+                        Content="Set Device Time"
+                        FontSize="14"
+                        Style="{StaticResource 3DButtonStyle}" />
+
+
+                    <Grid
+                        Width="200"
+                        Height="30"
+                        Margin="564,30,222,10"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="txtdevIp1"
+                            Width="200"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="Ip Address"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtdevIp"
+                            Width="200"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtdevIp1_GotFocus"
+                            IsReadOnly="False" />
+                    </Grid>
+
+
+                    <!--<TextBox
+                        x:Name="txtdevIp"
+                        Height="30"
+                        Margin="564,30,222,10"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="False"
+                        Text="Ip Address" />-->
+
+                </Grid>
+                <TextBlock Margin="0,0,0,0" HorizontalAlignment="Left">
+                    <Label
+                        Name="lblFirebaseSettings"
+                        Content="Firebase Credentials"
+                        FontSize="20"
+                        Foreground="#417AAB" />
+                </TextBlock>
+                <TextBlock
+                    Margin="0,10,10,5"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+                    <Label
+                        Width="120"
+                        Content="User Name"
+                        FontSize="13"
+                        Foreground="Black" />
+
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="UsernameOverlay"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="User Name"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtUsername"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtUsername_GotFocus"
+                            LostFocus="txtUsername_LostFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtMN"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="Machine Name" />-->
+
+                    <Label
+                        Width="120"
+                        Margin="20,0,0,0"
+                        Content="Password"
+                        FontSize="13"
+                        Foreground="Black" />
+
+                    <Grid
+                        Width="370"
+                        Height="30"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Background="White">
+                        <!--  overlay with hint text  -->
+
+                        <TextBlock
+                            Name="PasswordOverlay"
+                            Width="370"
+                            Height="30"
+                            Padding="5,10"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#777A7D"
+                            Text="SQL Server Instance"
+                            TextAlignment="Left" />
+
+                        <!--  enter term here  -->
+                        <TextBox
+                            Name="txtPassword"
+                            Width="370"
+                            Height="30"
+                            Padding="5,5"
+                            Background="Transparent"
+                            GotFocus="txtPassword_GotFocus"
+                            LostFocus="txtPassword_LostFocus"
+                            IsReadOnly="True" />
+                    </Grid>
+
+                    <!--<TextBox
+                        Name="txtSN"
+                        Width="370"
+                        Height="30"
+                        VerticalContentAlignment="Center"
+                        Foreground="Black"
+                        IsReadOnly="True"
+                        Text="SQL Server Instance" />-->
+
+                </TextBlock>
+                <TextBlock Margin="0,10,10,5" HorizontalAlignment="Center">
+
+                    <TextBlock x:Name="enabfleCon" MouseDown="Enable_Firebase_Controls">
+                        <Border
+                            BorderBrush="{StaticResource VISION}"
+                            BorderThickness="1,0,0,1"
+                            CornerRadius="5">
+
+
+                            <Image
+                                Name="AddfConn"
+                                Width="50"
+                                Height="30"
+                                Margin="3,0,3,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\add_circle_outline.png" />
+                                </Image.Source>
+                            </Image>
+                            <!--<materialDesign:PackIcon
+                            Margin="3,0,3,0"
+                                Height="30"
+                                Width="50"
+                                Name="AddConn"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="AddCircleOutline"   />-->
+
+                        </Border>
+                    </TextBlock>
+
+                    <Button
+                        Name="btnSaveFirebase"
+                        Padding="20,9"
+                        HorizontalAlignment="Right"
+                        Click="btnSaveFirebase_Click"
+                        Content="Create"
+                        Focusable="True"
+                        FontSize="14"
+                        IsEnabled="False"
+                        Style="{StaticResource 3DButtonStyle}"
+                        TabIndex="6" />
+                </TextBlock>
+
+                <TextBlock Name="StatusWindow" HorizontalAlignment="Center" />
+
+            </StackPanel>
+            <Button
+                Margin="0,60,10,0"
+                Padding="20,9"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="btn_startServ"
+                FontSize="14"
+                Style="{StaticResource 3DButtonStyle}"
+                Visibility="Collapsed">
+                Start CAMS Service
+            </Button>
+
+
+        </StackPanel>
+
+
+
+
+
+        <WindowsFormsHost
+            Name="axFP_CLOCKTest"
+            Height="170"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            Visibility="Hidden">
+            <WindowsFormsHost.Child>
+                <nt:AxFP_CLOCK x:Name="axFP_CLOCK" />
+            </WindowsFormsHost.Child>
+        </WindowsFormsHost>
+
+    </Grid>
+</UserControl>

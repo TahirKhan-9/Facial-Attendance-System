@@ -1,0 +1,309 @@
+﻿<Window
+    x:Class="FaceAttendance.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FaceAttendance"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:nt="clr-namespace:AxFP_CLOCKLib;assembly=AxInterop.FP_CLOCKLib"
+    x:Name="mainWindow"
+    Title="Login"
+    Width="500"
+    Height="260"
+    MinWidth="500"
+    MinHeight="230"
+    MaxWidth="500"
+    MaxHeight="260"
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="Segoe UI Emoji"
+    PreviewKeyDown="mainWindow_PreviewKeyDown"
+    ResizeMode="CanResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Grid Name="MainGrid">
+        <Border
+            BorderBrush="{StaticResource HIK}"
+            BorderThickness="4,0,0,4"
+            CornerRadius="10">
+            <Border
+                BorderBrush="{StaticResource VISION}"
+                BorderThickness="0,4,4,0"
+                CornerRadius="10"
+                Loaded="main_loaded" />
+            <Border.Background>
+                <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="{StaticResource BACKGROUND}" />
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <DockPanel>
+            <TextBlock
+                Margin="0,5,0,0"
+                HorizontalAlignment="Center"
+                DockPanel.Dock="Top">
+                <Label
+                    Margin="0"
+                    HorizontalAlignment="Center"
+                    FontFamily="Champagne &amp; Limousines"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource HEADER}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="{StaticResource VISION}" Text="Clock" />
+                        <TextBlock Foreground="{StaticResource HIK}" Text="Surveil" />
+                    </StackPanel>
+                </Label>
+            </TextBlock>
+
+            <StackPanel Margin="10" DockPanel.Dock="Bottom">
+                <TextBlock HorizontalAlignment="Right"><InlineUIContainer>
+                        <Label
+                            x:Name="statusshow"
+                            Margin="0,0,100,0"
+                            Content="2021 © Digital Data Systems"
+                            FontSize="10"
+                            Foreground="{StaticResource VISION}"
+                            Visibility="Visible" />
+
+                    </InlineUIContainer><Run Text=" " /><InlineUIContainer>
+
+                        <Button
+                            x:Name="btnLogin"
+                            Width="110"
+                            Height="33"
+                            HorizontalAlignment="Right"
+                            Background="{StaticResource VISION}"
+                            BorderBrush="{StaticResource VISION}"
+                            Click="btnLogin_Click"
+                            Focusable="True"
+                            Style="{StaticResource ButtonStyleGrey}"
+                            TabIndex="5">
+                            <Grid Width="85">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="7*" />
+                                    <RowDefinition Height="24*" />
+                                </Grid.RowDefinitions>
+                                <Image
+                                    Grid.RowSpan="2"
+                                    Width="20"
+                                    Height="28"
+                                    Margin="0,2,0,1"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="Images\account.png" />
+                                    </Image.Source>
+                                </Image>
+                                <!--<materialDesign:PackIcon VerticalAlignment="Center" Kind="Account" />-->
+                                <TextBlock
+                                    Grid.Row="1"
+                                    Margin="25,1.914,25,0"
+                                    HorizontalAlignment="Center"
+                                    FontFamily="Champagne &amp; Limousines"
+                                    FontSize="12"
+                                    Text="LOGIN" />
+                            </Grid>
+                        </Button>
+                    </InlineUIContainer><Run Text=" " /><Run Text=" " /><Run Text=" " /><InlineUIContainer>
+                        <Button
+                            x:Name="btnExit"
+                            Width="110"
+                            Height="33"
+                            HorizontalAlignment="Right"
+                            Background="{StaticResource HIK}"
+                            BorderBrush="{StaticResource HIK}"
+                            Click="exitfunc"
+                            Focusable="True"
+                            Style="{StaticResource ButtonStyleLBlue}"
+                            TabIndex="6">
+                            <Grid Width="85">
+                                <Image
+                                    Width="20"
+                                    Height="28"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="Images\location-exitW.png" />
+                                    </Image.Source>
+                                </Image>
+                                <!--<materialDesign:PackIcon VerticalAlignment="Center" Kind="PresenceExit" />-->
+                                <TextBlock
+                                    Margin="26,9,26,0"
+                                    HorizontalAlignment="Center"
+                                    FontFamily="Champagne &amp; Limousines"
+                                    FontSize="12"
+                                    Text="EXIT" />
+                            </Grid>
+                        </Button>
+
+                    </InlineUIContainer></TextBlock>
+            </StackPanel>
+
+            <StackPanel Margin="10,0,10,0">
+                <Label
+                    Margin="0,10,0,0"
+                    Content="Enter Your Credentials to Login"
+                    FontFamily="Champagne &amp; Limousines"
+                    FontSize="15"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource HEADER}" />
+                <Grid Margin="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45*" />
+                        <RowDefinition Height="4*" />
+                    </Grid.RowDefinitions>
+                    <!--  Define Columns  -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="4.5*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Grid.RowSpan="2"
+                        Grid.Column="0"
+                        Margin="0,5,0,0">
+                        <Label
+                            Margin="0,20,0,0"
+                            Content="LOGIN ID "
+                            FontFamily="Champagne &amp; Limousines"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Foreground="{StaticResource FREE}" />
+                        <Label
+                            Margin="0,20,0,0"
+                            Content="PASSWORD"
+                            FontFamily="Champagne &amp; Limousines"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Foreground="{StaticResource FREE}" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.RowSpan="2"
+                        Grid.Column="1"
+                        Margin="0,8,0,0">
+                        <Grid>
+                            <Border
+                                BorderBrush="{StaticResource HIK}"
+                                BorderThickness="0,0,0,0"
+                                CornerRadius="6">
+                                <Border
+                                    BorderBrush="{StaticResource VISION}"
+                                    BorderThickness="0,0,0,0"
+                                    CornerRadius="6" />
+                                <Border.Background>
+                                    <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Color="{StaticResource FieldBackground}" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+
+                            <StackPanel Margin="12,12,12,11">
+
+                                <Grid
+                                    Height="30"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Background="White">
+                                    <!--  overlay with hint text  -->
+
+                                    <TextBlock
+                                        Name="txtLoginID1"
+                                        Height="30"
+                                        Padding="5,10"
+                                        VerticalAlignment="Center"
+                                        FontSize="11"
+                                        Foreground="#777A7D"
+                                        Text="Enter User ID"
+                                        TextAlignment="Left" />
+
+                                    <!--  enter term here  -->
+                                    <TextBox
+                                        Name="txtLoginID"
+                                        Width="365"
+                                        Height="30"
+                                        Padding="5,5"
+                                        Background="Transparent"
+                                        GotFocus="txtLoginID_GotFocus"
+                                        IsReadOnly="False"
+                                        MouseEnter="set_tb_enter"
+                                        MouseLeave="set_tb_leave" />
+                                </Grid>
+
+
+                                <!--<TextBox
+                                    Name="txtLoginID"
+                                    Height="30"
+                                    VerticalContentAlignment="Center"
+                                    TabIndex="1" />-->
+
+                                <Grid
+                                    Height="30"
+                                    Margin="0,20,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Background="White">
+                                    <!--  overlay with hint text  -->
+
+                                    <TextBlock
+                                        Name="txtPassword1"
+                                        Height="30"
+                                        Padding="5,10"
+                                        VerticalAlignment="Center"
+                                        FontSize="11"
+                                        Foreground="#777A7D"
+                                        Text="Enter Password"
+                                        TextAlignment="Left" />
+
+                                    <!--  enter term here  -->
+                                    <PasswordBox
+                                        Name="txtPassword"
+                                        Width="365"
+                                        Height="30"
+                                        Padding="5,5"
+                                        Background="Transparent"
+                                        GotFocus="txtPassword_GotFocus"
+                                        MouseEnter="set_tb_enter"
+                                        MouseLeave="set_tb_leave" />
+                                </Grid>
+
+                                <!--<PasswordBox
+                                    Name="txtPassword"
+                                    Height="30"
+                                    Margin="0,20,0,0"
+                                    VerticalContentAlignment="Center"
+                                    TabIndex="2" />-->
+                            </StackPanel>
+
+                        </Grid>
+                        <TextBlock
+                            Name="LoginError"
+                            Margin="0,0,0,1"
+                            FontFamily="Champagne &amp; Limousines"
+                            FontSize="12"
+                            Foreground="{StaticResource Close}"
+                            Text="Login Failed! User name or Password is incorrect "
+                            Visibility="Collapsed" />
+                    </StackPanel>
+                </Grid>
+
+            </StackPanel>
+        </DockPanel>
+
+        <WindowsFormsHost
+            Name="axFP_CLOCKTest"
+            Height="170"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            Visibility="Hidden">
+            <WindowsFormsHost.Child>
+                <nt:AxFP_CLOCK x:Name="axFP_CLOCK" />
+            </WindowsFormsHost.Child>
+        </WindowsFormsHost>
+    </Grid>
+
+</Window>

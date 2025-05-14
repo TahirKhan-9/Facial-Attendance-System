@@ -1,0 +1,20 @@
+﻿FaceAttendance
+
+
+winexe
+C#
+.cs
+\\Saad-Pc\FaceAttendance Versions\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\obj\x86\Release\
+FaceAttendance
+none
+false
+TRACE
+\\Saad-Pc\FaceAttendance Versions\FaceAttendance ver 1.29  Setup - Full -\FaceAttendance\App.xaml
+131461106297
+4144802184
+37312245444
+73692613601
+DeviceManagement.xaml;MessageBoxWindow.xaml;master_splash.xaml;UserControls\ucAddStaff.xaml;UserControls\ucReports.xaml;UserControls\ucShifts.xaml;UserControls\ucStaffMan.xaml;frmSplash.xaml;MainWindow.xaml;UserControls\ucDev.xaml;UserControls\uLog.xaml;UserControls\uRealTimeLog.xaml;UserControls\uSettings.xaml;
+
+True
+

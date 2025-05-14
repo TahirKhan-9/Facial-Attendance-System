@@ -1,0 +1,1592 @@
+﻿<UserControl
+    x:Class="FaceAttendance.UserControls.ucReports"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FaceAttendance.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    d:DesignHeight="900"
+    d:DesignWidth="1324"
+    Loaded="UserControl_Loaded"
+    mc:Ignorable="d">
+    <StackPanel>
+        <TabControl
+            Height="auto"
+            MinHeight="350"
+            Background="Transparent">
+            <TabItem
+                x:Name="dailShifRep"
+                Height="30"
+                FontSize="16"
+                Foreground="{StaticResource HIK}"
+                Header="DailyShift Report"
+                Loaded="dailShifRep_Loaded"
+                Visibility="Visible">
+
+                <StackPanel
+                    VerticalAlignment="Top"
+                    Orientation="Vertical"
+                    Visibility="Visible">
+                    <Grid
+                        Grid.Row="0"
+                        Height="50"
+                        Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <!--<Grid
+                            Grid.Column="0"
+                            Width="200"
+                            Height="30"
+                            Margin="0,0,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Background="White">
+                        -->
+                        <!--  overlay with hint text  -->
+                        <!--
+
+                            <TextBlock
+                                Name="txt_search_1"
+                                Width="200"
+                                Height="30"
+                                Padding="5,10"
+                                VerticalAlignment="Center"
+                                FontSize="11"
+                                Foreground="#777A7D"
+                                Text="Enter User Id"
+                                TextAlignment="Left" />
+
+                        -->
+                        <!--  enter term here  -->
+                        <!--
+                            <TextBox
+                                Name="txt_search"
+                                Width="200"
+                                Height="30"
+                                Padding="5,5"
+                                Background="Transparent" />
+
+                        </Grid>-->
+                        <!--<Button
+                            Grid.Column="2"
+                            Width="122"
+                            Padding="25,9"
+                            HorizontalAlignment="Left"
+                            Click="Download_Data_Click"
+                            Content="Download"
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6" />-->
+                        <!--<TextBox
+                                        x:Name="txt_search"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Width="200"
+                                        Height="30"
+                                        Margin="0,8,0,7"
+                                        HorizontalAlignment="Left"
+                                        FontSize="15"
+                                        Foreground="Black"
+                                        Text=""
+                                        TextChanged="Txt_chnged_ItemSo_reset" />-->
+                        <StackPanel Grid.Column="3" Orientation="Horizontal">
+                            <RadioButton
+                                Name="LateIn"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Checked="Radio_Checked"
+                                Click="Radio_Clicked"
+                                Content="Late In"
+                                Foreground="{StaticResource HIK}"
+                                GroupName="DailyRep" />
+                            <RadioButton
+                                Name="EarlyOut"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Checked="Radio_Checked"
+                                Click="Radio_Clicked"
+                                Content="Early Out"
+                                Foreground="{StaticResource HIK}"
+                                GroupName="DailyRep" />
+                            <RadioButton
+                                Name="Absent"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Checked="Radio_Checked"
+                                Click="Radio_Clicked"
+                                Content="Absent"
+                                Foreground="{StaticResource HIK}"
+                                GroupName="DailyRep" />
+                            <Line
+                                Stroke="#A0A0A0"
+                                StrokeThickness="2"
+                                X1="10"
+                                X2="0"
+                                Y1="10"
+                                Y2="40" />
+                            <CheckBox
+                                Name="All_CheckBox"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Checked="All_CheckBox_Checked"
+                                Foreground="{StaticResource HIK}" />
+                            <Label
+                                Name="CheckBoxLabel"
+                                VerticalAlignment="Center"
+                                Content="Complete Report"
+                                Foreground="{StaticResource HIK}"
+                                PreviewMouseDown="CheckBoxLabel_PreviewMouseDown" />
+                            <Button
+                                Width="130"
+                                Margin="10,0,0,0"
+                                Padding="25,9"
+                                HorizontalAlignment="Right"
+                                Click="startGDReport_click"
+                                Content="Get Report"
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6" />
+
+                        </StackPanel>
+                        <!--<Button
+                            Grid.Column="2"
+                            Width="130"
+                            Margin="10,0,0,0"
+                            Padding="25,9"
+                            HorizontalAlignment="Right"
+                            Click="startGDReport_click"
+                            Content="Get Report"
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6" />-->
+                        <DatePicker
+                            x:Name="dpdreport"
+                            Grid.Column="0"
+                            Width="130"
+                            Height="30"
+                            Margin="10,0,10,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                            <CheckBox
+                                Name="Overlap_CheckBox"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource HIK}"
+                                Visibility="Collapsed" />
+                            <!--  Checked="Overlap_CheckBox_Checked"  -->
+                            <Label
+                                Name="OverlapCheckBoxLabel"
+                                VerticalAlignment="Center"
+                                Content="Day Overlap"
+                                Foreground="{StaticResource HIK}"
+                                PreviewMouseDown="OverlapLabel_PreviewMouseDown"
+                                Visibility="Collapsed" />
+                            <ComboBox
+                                Name="shiftsCombo"
+                                Width="140"
+                                Height="30"
+                                Margin="10,10,2,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                IsEditable="True"
+                                IsReadOnly="True"
+                                SelectedValuePath="ShiftId"
+                                SelectionChanged="shiftsCombo_SelectionChanged"
+                                Text="---Select Shift---" />
+                            <Image
+                                x:Name="refresh"
+                                Width="30"
+                                Height="30"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                MouseDown="refresh_MouseDown"
+                                MouseEnter="refresh_MouseEnter"
+                                MouseLeave="refresh_MouseLeave"
+                                Visibility="Collapsed">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </StackPanel>
+
+                        <StackPanel
+                            Grid.Column="5"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal"
+                            Visibility="Collapsed">
+                            <Label
+                                x:Name="dlabelExport"
+                                Height="40"
+                                Margin="10"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Content="Export To"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource HIK}"
+                                Visibility="Collapsed" />
+                            <Button
+                                x:Name="dbtnExpEp"
+                                Width="120"
+                                Margin="0,6,10,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Center"
+                                Click="dexport_Excel"
+                                Content="    Excel "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+                            <Button
+                                x:Name="dbtnExpCvs"
+                                Width="120"
+                                Margin="0,6,10,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Center"
+                                Click="dexport_Cvs"
+                                Content="    CSV "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+
+
+                        </StackPanel>
+                        <!--<Button
+                            x:Name="dbtnExpEp"
+                            Grid.Column="4"
+                            Width="120"
+                            Margin="0,6,0,6"
+                            Padding="25,9"
+                            HorizontalAlignment="Center"
+                            Click="dexport_Excel"
+                            Content="    Excel "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Visible" />
+                        <Button
+                            x:Name="dbtnExpCvs"
+                            Grid.Column="4"
+                            Width="120"
+                            Margin="0,6,10,6"
+                            Padding="25,9"
+                            HorizontalAlignment="right"
+                            Click="dexport_Cvs"
+                            Content="    CSV "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Visible" />
+                        <Label
+                            x:Name="dlabelExport"
+                            Grid.Column="4"
+                            Height="40"
+                            Margin="10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Content="Export To"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="{StaticResource HIK}"
+                            Visibility="Visible" />-->
+
+                        <!--<Grid
+                            Grid.Column="2"
+                            Width="30"
+                            Height="30"
+                            MouseDown="down_rel_list">
+                            <Image
+                                Name="downUser"
+                                Grid.Column="2"
+                                Width="30"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>-->
+
+                        <Image
+                            x:Name="D_Wait"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="0,0,150,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="91*" />
+                            <ColumnDefinition Width="332*" />
+                            <ColumnDefinition Width="895*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewer:CrystalReportsViewer
+                            x:Name="DailyRep"
+                            Grid.ColumnSpan="3"
+                            Height="750" />
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem
+                Height="30"
+                FontSize="16"
+                Foreground="{StaticResource HIK}"
+                Header="MonthlyOpenShift Report"
+                Visibility="Visible">
+
+                <StackPanel
+                    VerticalAlignment="Top"
+                    Orientation="Vertical"
+                    Visibility="Visible">
+                    <Grid
+                        Grid.Row="0"
+                        Height="50"
+                        Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="179*" />
+                            <ColumnDefinition Width="568*" />
+                            <ColumnDefinition Width="249*" />
+                            <ColumnDefinition Width="323*" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <StackPanel
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Orientation="Horizontal">
+                            <Grid
+                                Grid.ColumnSpan="4"
+                                Width="150"
+                                Height="30"
+                                Margin="0,10"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Background="Transparent">
+                                <!--  overlay with hint text  -->
+                                <!--  enter term here  -->
+                                <!--<Calendar DisplayMode="Month" Name="dpmreport"   >
+                                <Calendar.Resources>
+                                    <Style TargetType="DatePickerTextBox">
+                                        <Setter Property="IsReadOnly" Value="True" />
+                                        <Setter Property="Text" Value="{Binding Path=SelectedDate, StringFormat='yyyy/MM', RelativeSource={RelativeSource AncestorType=DatePicker}}" />
+                                    </Style>
+                                </Calendar.Resources>
+                            </Calendar>-->
+                                <!--<DatePicker
+                                Name="dpmreport"
+                                Grid.Column="0"
+                                Width="130"
+                                Height="30"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center" />-->
+                                <DatePicker
+                                    x:Name="dpmreport"
+                                    Width="130"
+                                    Height="30"
+                                    Margin="10,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center">
+                                    <DatePicker.Resources>
+                                        <Style TargetType="{x:Type DatePickerTextBox}">
+                                            <Setter Property="IsReadOnly" Value="True" />
+                                            <Setter Property="Text" Value="{Binding SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat=yyyy/MM}" />
+                                        </Style>
+                                    </DatePicker.Resources>
+                                </DatePicker>
+
+                            </Grid>
+                            <Grid
+                                Width="100"
+                                Height="30"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                MouseDown="clearst_click">
+                                <!--  overlay with hint text  -->
+
+                                <TextBlock
+                                    Name="txtdemoIn"
+                                    Width="100"
+                                    VerticalAlignment="Center"
+                                    FontSize="11"
+                                    Foreground="#777A7D"
+                                    MouseDown="clearst_click"
+                                    Text="StartTime 00:00"
+                                    TextAlignment="Left" />
+
+                                <!--  enter term here  -->
+                                <TextBox
+                                    Name="inTime"
+                                    Width="100"
+                                    Height="30"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Background="Transparent"
+                                    GotFocus="inTime_GotFocus"
+                                    MaxLength="5"
+                                    MouseDown="clearst_click"
+                                    TextChanged="inTime_TextChanged" />
+
+                            </Grid>
+                            <Grid
+                                Width="100"
+                                Height="30"
+                                Margin="0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Background="Transparent"
+                                MouseDown="outTime_MouseDown">
+                                <!--  overlay with hint text  -->
+
+                                <TextBlock
+                                    Name="txtdemoOut"
+                                    Width="100"
+                                    Height="30"
+                                    Padding="5,10"
+                                    VerticalAlignment="Center"
+                                    FontSize="11"
+                                    Foreground="#777A7D"
+                                    MouseDown="outTime_MouseDown"
+                                    Text="OutTime 00:00"
+                                    TextAlignment="Left" />
+
+                                <!--  enter term here  -->
+                                <TextBox
+                                    Name="outTime"
+                                    Width="100"
+                                    Height="30"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Background="Transparent"
+                                    GotFocus="outTime_GotFocus"
+                                    IsReadOnly="False"
+                                    MaxLength="5"
+                                    MouseDown="outTime_MouseDown"
+                                    TextChanged="outTime_TextChanged" />
+
+                            </Grid>
+                            <ComboBox
+                                Name="cusShiftCombo"
+                                Width="150"
+                                Height="30"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Background="White"
+                                BorderBrush="White"
+                                IsEditable="True"
+                                ItemsSource="{Binding Letters}"
+                                Text="--SelectCusShift--" />
+                            <Grid
+                                Width="100"
+                                Height="30"
+                                Margin="0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Background="Transparent"
+                                MouseDown="maxoutTime_MouseDown"
+                                Visibility="Collapsed">
+                                <!--  overlay with hint text  -->
+
+                                <TextBlock
+                                    Name="txtdemoMaxTimeOut"
+                                    Width="100"
+                                    Height="30"
+                                    Padding="5,10"
+                                    VerticalAlignment="Center"
+                                    FontSize="11"
+                                    Foreground="#777A7D"
+                                    MouseDown="maxoutTime_MouseDown"
+                                    Text="MaxOutTime 00:00"
+                                    TextAlignment="Left" />
+
+                                <!--  enter term here  -->
+                                <TextBox
+                                    Name="maxoutTime"
+                                    Width="100"
+                                    Height="30"
+                                    VerticalAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Background="Transparent"
+                                    GotFocus="maxoutTime_GotFocus"
+                                    IsReadOnly="False"
+                                    MaxLength="5"
+                                    MouseDown="maxoutTime_MouseDown"
+                                    TextChanged="maxoutTime_TextChanged" />
+
+                            </Grid>
+                            <Button
+                                Grid.Column="0"
+                                Width="120"
+                                Margin="16,6,0,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Right"
+                                Click="btn_MRep"
+                                Content="Generate "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6" />
+                        </StackPanel>
+                        <Button
+                            x:Name="btnExpEp"
+                            Grid.Column="3"
+                            Width="120"
+                            Margin="0,25,30,25"
+                            Padding="25,9"
+                            HorizontalAlignment="Right"
+                            Click="export_Excel"
+                            Content="    Excel "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Collapsed" />
+
+                        <Button
+                            x:Name="btnExpCvs"
+                            Grid.Column="3"
+                            Width="120"
+                            Margin="25,25,0,25"
+                            Padding="25,9"
+                            HorizontalAlignment="left"
+                            Click="export_Cvs"
+                            Content="    CSV "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Visible" />
+                        <Label
+                            x:Name="labelExport"
+                            Grid.Column="2"
+                            Height="40"
+                            Margin="0,5,10,5"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Content="Export To"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="{StaticResource HIK}"
+                            Visibility="Collapsed" />
+
+
+                        <!--<Grid
+                            Grid.Column="2"
+                            Width="30"
+                            Height="30"
+                            MouseDown="down_rel_list">
+                            <Image
+                                Name="downUser"
+                                Grid.Column="2"
+                                Width="30"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>-->
+
+                        <Image
+                            x:Name="D_Wait1"
+                            Grid.Column="3"
+                            Width="50"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="312*" />
+                            <ColumnDefinition Width="347*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewer:CrystalReportsViewer
+                            x:Name="MonthlyRep"
+                            Grid.ColumnSpan="2"
+                            Height="750" />
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem
+                Height="30"
+                FontSize="16"
+                Foreground="{StaticResource HIK}"
+                Header="DailyLog Report">
+
+                <StackPanel VerticalAlignment="Top" Orientation="Vertical">
+                    <Grid
+                        Grid.Row="0"
+                        Height="50"
+                        Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <Grid
+                            Grid.Column="0"
+                            Grid.ColumnSpan="4"
+                            Width="200"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Background="Transparent">
+                            <!--  overlay with hint text  -->
+                            <!--  enter term here  -->
+                            <!--<Calendar DisplayMode="Month" Name="dpmreport"   >
+                                <Calendar.Resources>
+                                    <Style TargetType="DatePickerTextBox">
+                                        <Setter Property="IsReadOnly" Value="True" />
+                                        <Setter Property="Text" Value="{Binding Path=SelectedDate, StringFormat='yyyy/MM', RelativeSource={RelativeSource AncestorType=DatePicker}}" />
+                                    </Style>
+                                </Calendar.Resources>
+                            </Calendar>-->
+                            <!--<DatePicker
+                                Name="dpmreport"
+                                Grid.Column="0"
+                                Width="130"
+                                Height="30"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center" />-->
+                            <DatePicker
+                                x:Name="dailyLogDate"
+                                Grid.Column="0"
+                                Width="130"
+                                Height="30"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center" />
+
+                        </Grid>
+
+
+
+                        <!--<Button
+                            Grid.Column="2"
+                            Width="122"
+                            Padding="25,9"
+                            HorizontalAlignment="Left"
+                            Click="Download_Data_Click"
+                            Content="Download"
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6" />-->
+                        <!--<TextBox
+                                        x:Name="txt_search"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Width="200"
+                                        Height="30"
+                                        Margin="0,8,0,7"
+                                        HorizontalAlignment="Left"
+                                        FontSize="15"
+                                        Foreground="Black"
+                                        Text=""
+                                        TextChanged="Txt_chnged_ItemSo_reset" />-->
+
+                        <Button
+                            Grid.Column="0"
+                            Width="130"
+                            Margin="200 0 0 0"
+                            Padding="20,9"
+                            HorizontalAlignment="Left"
+                            Click="Button_Click"
+                            Content="Get Report"
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6" />
+                        <Button
+                            x:Name="dailbtnExpEp"
+                            Grid.Column="2"
+                            Width="120"
+                            Margin="0,0,30,0"
+                            Padding="25,9"
+                            HorizontalAlignment="Right"
+                            Click="dailbtnExpEp_Click"
+                            Content="    Excel "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Hidden" />
+
+                        <Button
+                            x:Name="dailbtnExpCvs"
+                            Grid.Column="2"
+                            Width="120"
+                            Margin="25,0,0,0"
+                            Padding="25,9"
+                            HorizontalAlignment="left"
+                            Click="export_Cvs"
+                            Content="    CSV "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Collapsed" />
+                        <Label
+                            x:Name="daillabelExport"
+                            Grid.Column="1"
+                            Height="40"
+                            Margin="0,5,10,5"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Content="Export To"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="{StaticResource HIK}"
+                            Visibility="Collapsed" />
+
+
+                        <!--<Grid
+                            Grid.Column="2"
+                            Width="30"
+                            Height="30"
+                            MouseDown="down_rel_list">
+                            <Image
+                                Name="downUser"
+                                Grid.Column="2"
+                                Width="30"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>-->
+
+                        <Image
+                            x:Name="dailD_Wait1"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                    <!--<DataGrid
+                        x:Name="dailLogGrid"
+                        Height="713"
+                        Margin="0,5,0,0"
+                        VerticalAlignment="Top"
+                        AlternatingRowBackground="#ACD7E6"
+                        AutoGenerateColumns="True"
+                        Background="White"
+                        CanUserSortColumns="True"
+                        HorizontalScrollBarVisibility="Auto"
+                        IsEnabled="True"
+                        IsReadOnly="True"
+                        SelectionUnit="FullRow"
+                        VerticalScrollBarVisibility="Auto" />-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="91*" />
+                            <ColumnDefinition Width="927*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewer:CrystalReportsViewer
+                            x:Name="dailRep"
+                            Grid.ColumnSpan="2"
+                            Height="750" />
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem
+                Height="30"
+                FontSize="16"
+                Foreground="{StaticResource HIK}"
+                Header="MonthlyLog Report">
+                <StackPanel VerticalAlignment="Top" Orientation="Vertical">
+                    <Grid
+                        Grid.Row="0"
+                        Height="50"
+                        Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+
+
+                        </Grid.ColumnDefinitions>
+
+
+                        <StackPanel
+                            Grid.Column="0"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Orientation="Horizontal">
+                            <!--  overlay with hint text  -->
+                            <!--  enter term here  -->
+                            <!--<Calendar DisplayMode="Month" Name="dpmreport"   >
+                                <Calendar.Resources>
+                                    <Style TargetType="DatePickerTextBox">
+                                        <Setter Property="IsReadOnly" Value="True" />
+                                        <Setter Property="Text" Value="{Binding Path=SelectedDate, StringFormat='yyyy/MM', RelativeSource={RelativeSource AncestorType=DatePicker}}" />
+                                    </Style>
+                                </Calendar.Resources>
+                            </Calendar>-->
+                            <!--<DatePicker
+                                Name="dpmreport"
+                                Grid.Column="0"
+                                Width="130"
+                                Height="30"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center" />-->
+                            <Label Margin="0,-4,0,0" FontSize="20">From :</Label>
+                            <DatePicker
+                                x:Name="startDate"
+                                Width="140"
+                                Height="30"
+                                Margin="5,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontSize="18"
+                                Text="From" />
+                            <Label Margin="0,-4,0,0" FontSize="20">To :</Label>
+                            <DatePicker
+                                x:Name="endDate"
+                                Width="135"
+                                Height="30"
+                                Margin="5,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                FontSize="18" />
+                            <DatePicker
+                                x:Name="monstLogDate"
+                                Grid.Column="0"
+                                Width="130"
+                                Height="30"
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Visibility="Collapsed" />
+
+                        </StackPanel>
+
+
+
+                        <!--<Button
+                            Grid.Column="2"
+                            Width="122"
+                            Padding="25,9"
+                            HorizontalAlignment="Left"
+                            Click="Download_Data_Click"
+                            Content="Download"
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6" />-->
+                        <!--<TextBox
+                                        x:Name="txt_search"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Width="200"
+                                        Height="30"
+                                        Margin="0,8,0,7"
+                                        HorizontalAlignment="Left"
+                                        FontSize="15"
+                                        Foreground="Black"
+                                        Text=""
+                                        TextChanged="Txt_chnged_ItemSo_reset" />-->
+
+                        <Button
+                            Grid.Column="0"
+                            Width="auto"
+                            Margin="400,0,0,0"
+                            Padding="20,9"
+                            HorizontalAlignment="Left"
+                            Click="Button_Click_1"
+                            Content="Get Log"
+                            FontSize="14"
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6" />
+                        <Button
+                            x:Name="monthbtnExpEp"
+                            Grid.Column="2"
+                            Width="120"
+                            Margin="0,0,30,0"
+                            Padding="25,9"
+                            HorizontalAlignment="Right"
+                            Click="monthbtnExpEp_Click"
+                            Content="    Excel "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Hidden" />
+
+                        <Button
+                            x:Name="monthbtnExpCvs"
+                            Grid.Column="2"
+                            Width="120"
+                            Margin="25,0,0,0"
+                            Padding="25,9"
+                            HorizontalAlignment="left"
+                            Click="export_Cvs"
+                            Content="    CSV "
+                            Style="{StaticResource 3DButtonStyle}"
+                            TabIndex="6"
+                            Visibility="Collapsed" />
+                        <Label
+                            x:Name="monthlabelExport"
+                            Grid.Column="1"
+                            Height="40"
+                            Margin="0,5,10,5"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Content="Export To"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="{StaticResource HIK}"
+                            Visibility="Collapsed" />
+
+
+                        <!--<Grid
+                            Grid.Column="2"
+                            Width="30"
+                            Height="30"
+                            MouseDown="down_rel_list">
+                            <Image
+                                Name="downUser"
+                                Grid.Column="2"
+                                Width="30"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>-->
+
+                        <Image
+                            x:Name="monthD_Wait1"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                        </Image>
+                    </Grid>
+                    <!--<DataGrid
+                        x:Name="monthLogGrid"
+                        Height="713"
+                        Margin="0,5,0,0"
+                        VerticalAlignment="Top"
+                        AlternatingRowBackground="#ACD7E6"
+                        AutoGenerateColumns="True"
+                        Background="White"
+                        CanUserSortColumns="True"
+                        HorizontalScrollBarVisibility="Auto"
+                        IsEnabled="True"
+                        IsReadOnly="True"
+                        SelectionUnit="FullRow"
+                        VerticalScrollBarVisibility="Auto" />-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="91*" />
+                            <ColumnDefinition Width="927*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewer:CrystalReportsViewer
+                            x:Name="monthLogGrid"
+                            Grid.ColumnSpan="2"
+                            Height="750" />
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem
+                Height="30"
+                Margin="-2,-2,-2,0"
+                FontSize="16"
+                Foreground="{StaticResource HIK}"
+                Header="MonthlyShifts Report"
+                Visibility="Visible">
+
+
+                <StackPanel
+                    VerticalAlignment="Top"
+                    Orientation="Vertical"
+                    Visibility="Visible">
+                    <Grid
+                        Grid.Row="0"
+                        Height="50"
+                        Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <ComboBox
+                                Name="MonthCombo"
+                                Width="150"
+                                Height="30"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Background="White"
+                                BorderBrush="White"
+                                IsEditable="True"
+                                ItemsSource="{Binding Months}"
+                                SelectionChanged="MonthCombo_SelectionChanged"
+                                Text="-SelectMonth-">
+                                <ComboBoxItem>January</ComboBoxItem>
+                                <ComboBoxItem>February</ComboBoxItem>
+                                <ComboBoxItem>March</ComboBoxItem>
+                                <ComboBoxItem>April</ComboBoxItem>
+                                <ComboBoxItem>May</ComboBoxItem>
+                                <ComboBoxItem>June</ComboBoxItem>
+                                <ComboBoxItem>July</ComboBoxItem>
+                                <ComboBoxItem>August</ComboBoxItem>
+                                <ComboBoxItem>September</ComboBoxItem>
+                                <ComboBoxItem>October</ComboBoxItem>
+                                <ComboBoxItem>November</ComboBoxItem>
+                                <ComboBoxItem>December</ComboBoxItem>
+                            </ComboBox>
+
+
+                            <TextBox
+                                Name="YearInput"
+                                Width="100"
+                                Height="30"
+                                Margin="10,0"
+                                Padding="4"
+                                VerticalAlignment="Center"
+                                PreviewKeyDown="YearInput_PreviewKeyDown"
+                                PreviewTextInput="YearInput_PreviewTextInput"
+                                Visibility="Collapsed" />
+
+
+
+
+                            <ComboBox
+                                Name="Monthly_ShiftCombo"
+                                Width="150"
+                                Height="30"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Background="White"
+                                BorderBrush="White"
+                                IsEditable="True"
+                                ItemsSource="{Binding Letters}"
+                                SelectionChanged="Monthly_ShiftCombo_SelectionChanged"
+                                Text="-SelectShift-" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton
+                                    Grid.Column="1"
+                                    Name="rad_WithoutTime"
+                                    Margin="4"
+                                    VerticalAlignment="Center"
+                                    Content="Without Time"
+                                    Foreground="{StaticResource HIK}"
+                                    GroupName="DailyRep" />
+                                <RadioButton
+                                    Grid.Column="0"
+                                    Name="rad_WithTime"
+                                    Margin="4"
+                                    VerticalAlignment="Center"
+                                    Content="With Time"
+                                    IsChecked="True"
+                                    Foreground="{StaticResource HIK}"
+                                    GroupName="DailyRep" />
+                            </Grid>
+                            <!--<Line
+                                Stroke="#A0A0A0"
+                                StrokeThickness="2"
+                                X1="10"
+                                X2="0"
+                                Y1="10"
+                                Y2="40" />-->
+                            <CheckBox
+                                Name="SaturdayOff_CheckBox"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource HIK}" />
+                            <Label
+                                Name="SaturdayLabel"
+                                VerticalAlignment="Center"
+                                Content="Saturday Off"
+                                Foreground="{StaticResource HIK}"
+                                PreviewMouseDown="SaturdayLabel_PreviewMouseDown" />
+                            <CheckBox
+                                Name="SundayOff_CheckBox"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource HIK}" />
+                            <Label
+                                Name="SundayLabel"
+                                VerticalAlignment="Center"
+                                Content="Sunday Off"
+                                Foreground="{StaticResource HIK}"
+                                PreviewMouseDown="SundayLabel_PreviewMouseDown" />
+
+                            <Button
+                                Name="GenerateMonthly"
+                                Grid.Column="0"
+                                Width="120"
+                                Margin="16,6,0,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Right"
+                                Click="GenerateMonthly_Click"
+                                Content="Generate "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6" />
+                            <!--  Click="btn_MRep"  -->
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Column="2"
+                            Orientation="Horizontal"
+                            Visibility="Collapsed">
+                            <Label
+                                x:Name="dlabel1Export"
+                                Height="40"
+                                Margin="10"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Content="Export To"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource HIK}"
+                                Visibility="Visible" />
+                            <Button
+                                x:Name="dbtn1ExpEp"
+                                Width="120"
+                                Margin="0,6,10,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Center"
+                                Click="dexport_Excel"
+                                Content="    Excel "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+                            <Button
+                                x:Name="dbtn1ExpCvs"
+                                Width="120"
+                                Margin="0,6,10,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Center"
+                                Click="dexport_Cvs"
+                                Content="    CSV "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+
+
+                        </StackPanel>
+                        <!--<StackPanel Grid.Column="2" Orientation="Horizontal">
+                            <Button
+                                x:Name="btn1ExpEp"
+                                Width="120"
+                                Margin="0,25,30,25"
+                                Padding="25,9"
+                                HorizontalAlignment="Right"
+                                Content="    Excel "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+                        -->
+                        <!--  Click="export_Excel"  -->
+                        <!--
+
+
+                            <Button
+                                x:Name="btn1ExpCvs"
+                                Width="120"
+                                Margin="25,25,0,25"
+                                Padding="25,9"
+                                HorizontalAlignment="left"
+                                Content="    CSV "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+
+                        -->
+                        <!--  Click="export_Cvs"  -->
+                        <!--
+
+                            <Label
+                                x:Name="label1Export"
+                                Height="40"
+                                Margin="0,5,10,5"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Content="Export To"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource HIK}"
+                                Visibility="Visible" />
+                        </StackPanel>-->
+
+
+
+                        <!--<Grid
+                            Grid.Column="2"
+                            Width="30"
+                            Height="30"
+                            MouseDown="down_rel_list">
+                            <Image
+                                Name="downUser"
+                                Grid.Column="2"
+                                Width="30"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>-->
+
+                        <Image
+                            x:Name="D_1Wait1"
+                            Grid.Column="1"
+                            Width="30"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                            <Image.RenderTransform>
+                                <RotateTransform x:Name="RotateTransform" Angle="0" />
+                            </Image.RenderTransform>
+                            <Image.RenderTransformOrigin>
+                                <Point>0.5, 0.5</Point>
+                            </Image.RenderTransformOrigin>
+                        </Image>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="985*" />
+                            <ColumnDefinition Width="333*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewer:CrystalReportsViewer
+                            x:Name="MonthlyReport2"
+                            Grid.ColumnSpan="2"
+                            Height="700" />
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem
+                Height="30"
+                Margin="-2,-2,-2,0"
+                FontSize="16"
+                Foreground="{StaticResource HIK}"
+                Header="Monthly Performance Report"
+                Visibility="Visible">
+                <StackPanel
+                    VerticalAlignment="Top"
+                    Orientation="Vertical"
+                    Visibility="Visible">
+                    <Grid
+                        Grid.Row="0"
+                        Height="50"
+                        Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <ComboBox
+                                Name="MonthCombo1"
+                                Width="150"
+                                Height="30"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Background="White"
+                                BorderBrush="White"
+                                IsEditable="True"
+                                ItemsSource="{Binding Months}"
+                                SelectionChanged="MonthCombo1_SelectionChanged"
+                                Text="-SelectMonth-">
+                                <ComboBoxItem>January</ComboBoxItem>
+                                <ComboBoxItem>February</ComboBoxItem>
+                                <ComboBoxItem>March</ComboBoxItem>
+                                <ComboBoxItem>April</ComboBoxItem>
+                                <ComboBoxItem>May</ComboBoxItem>
+                                <ComboBoxItem>June</ComboBoxItem>
+                                <ComboBoxItem>July</ComboBoxItem>
+                                <ComboBoxItem>August</ComboBoxItem>
+                                <ComboBoxItem>September</ComboBoxItem>
+                                <ComboBoxItem>October</ComboBoxItem>
+                                <ComboBoxItem>November</ComboBoxItem>
+                                <ComboBoxItem>December</ComboBoxItem>
+                            </ComboBox>
+
+
+                            <TextBox
+                                Name="YearInput1"
+                                Width="100"
+                                Height="30"
+                                Margin="10,0"
+                                Padding="4"
+                                VerticalAlignment="Center"
+                                PreviewKeyDown="YearInput_PreviewKeyDown"
+                                PreviewTextInput="YearInput_PreviewTextInput"
+                                Visibility="Collapsed" />
+
+
+
+
+                            <ComboBox
+                                Name="Monthly_ShiftCombo1"
+                                Width="150"
+                                Height="30"
+                                Margin="10,10,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Background="White"
+                                BorderBrush="White"
+                                IsEditable="True"
+                                ItemsSource="{Binding Letters}"
+                                SelectionChanged="Monthly_ShiftCombo1_SelectionChanged"
+                                Text="-SelectShift-" />
+                            <ComboBox
+                                    x:Name="cmbUsers"
+                                    Width="250"
+                                    Height="30"
+                                    Margin="10 10 40 0"
+                                    IsEditable="True"
+                                    IsTextSearchEnabled="False"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    TabIndex="2"
+                                    Text="Select User"
+                                    GotFocus="cmbUsers_GotFocus"
+                                    SelectionChanged="cmbUsers_SelectionChanged"
+                                    />
+                            <!--GotFocus="cmbUsers_GotFocus"
+                                    SelectionChanged="cmbUsers_SelectionChanged"-->
+                            <!--<Line
+                                Stroke="#A0A0A0"
+                                StrokeThickness="2"
+                                X1="10"
+                                X2="0"
+                                Y1="10"
+                                Y2="40" />-->
+                            <CheckBox
+                                Name="SaturdayOff_CheckBox1"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource HIK}" />
+                            <Label
+                                Name="SaturdayLabel1"
+                                VerticalAlignment="Center"
+                                Content="Saturday Off"
+                                Foreground="{StaticResource HIK}"
+                                PreviewMouseDown="SaturdayLabel1_PreviewMouseDown" />
+                            <CheckBox
+                                Name="SundayOff_CheckBox1"
+                                Margin="4"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource HIK}" />
+                            <Label
+                                Name="SundayLabel1"
+                                VerticalAlignment="Center"
+                                Content="Sunday Off"
+                                Foreground="{StaticResource HIK}"
+                                PreviewMouseDown="SundayLabel1_PreviewMouseDown" />
+
+                            <Button
+                                Name="GenerateMonthly1"
+                                Grid.Column="0"
+                                Width="120"
+                                Margin="16,6,0,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Right"
+                                Click="GenerateMonthly1_Click"
+                                Content="Generate "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6" />
+                            <!--  Click="btn_MRep"  -->
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Column="2"
+                            Orientation="Horizontal"
+                            Visibility="Collapsed">
+                            <Label
+                                x:Name="dlabel1Export1"
+                                Height="40"
+                                Margin="10"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Content="Export To"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource HIK}"
+                                Visibility="Visible" />
+                            <Button
+                                x:Name="dbtn1ExpEp1"
+                                Width="120"
+                                Margin="0,6,10,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Center"
+                                Click="dexport_Excel"
+                                Content="    Excel "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+                            <Button
+                                x:Name="dbtn1ExpCvs1"
+                                Width="120"
+                                Margin="0,6,10,6"
+                                Padding="25,9"
+                                HorizontalAlignment="Center"
+                                Click="dexport_Cvs"
+                                Content="    CSV "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+
+
+                        </StackPanel>
+                        <!--<StackPanel Grid.Column="2" Orientation="Horizontal">
+                            <Button
+                                x:Name="btn1ExpEp"
+                                Width="120"
+                                Margin="0,25,30,25"
+                                Padding="25,9"
+                                HorizontalAlignment="Right"
+                                Content="    Excel "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+                        -->
+                        <!--  Click="export_Excel"  -->
+                        <!--
+
+
+                            <Button
+                                x:Name="btn1ExpCvs"
+                                Width="120"
+                                Margin="25,25,0,25"
+                                Padding="25,9"
+                                HorizontalAlignment="left"
+                                Content="    CSV "
+                                Style="{StaticResource 3DButtonStyle}"
+                                TabIndex="6"
+                                Visibility="Visible" />
+
+                        -->
+                        <!--  Click="export_Cvs"  -->
+                        <!--
+
+                            <Label
+                                x:Name="label1Export"
+                                Height="40"
+                                Margin="0,5,10,5"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Content="Export To"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource HIK}"
+                                Visibility="Visible" />
+                        </StackPanel>-->
+
+
+
+                        <!--<Grid
+                            Grid.Column="2"
+                            Width="30"
+                            Height="30"
+                            MouseDown="down_rel_list">
+                            <Image
+                                Name="downUser"
+                                Grid.Column="2"
+                                Width="30"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>-->
+
+                        <Image
+                            x:Name="D_1Wait2"
+                            Grid.Column="1"
+                            Width="30"
+                            Height="30"
+                            Margin="0,10"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                            <Image.RenderTransform>
+                                <RotateTransform x:Name="RotateTransform1" Angle="0" />
+                            </Image.RenderTransform>
+                            <Image.RenderTransformOrigin>
+                                <Point>0.5, 0.5</Point>
+                            </Image.RenderTransformOrigin>
+                        </Image>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="985*" />
+                            <ColumnDefinition Width="333*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewer:CrystalReportsViewer
+                            x:Name="MonthlyReport3"
+                            Grid.ColumnSpan="2"
+                            Height="750" />
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <TextBlock
+            Height="40"
+            FontSize="20"
+            Foreground="{StaticResource HIK}"
+            Text="Report Creation" />
+    </StackPanel>
+</UserControl>

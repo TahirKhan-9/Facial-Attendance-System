@@ -1,0 +1,956 @@
+﻿<UserControl x:Class="FaceAttendance.UserControls.ucFirebaseSync"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FaceAttendance.UserControls"
+             mc:Ignorable="d" 
+             Loaded="ucFirebaseSync_Loaded"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <TextBlock
+                    FontSize="20"
+                    Margin="0 0 0 20"
+                    Foreground="{StaticResource HIK}"
+                    Text="Sync Images From Firebase" />
+            </Grid>
+            
+            <Grid Height="390" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Height="50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="0.5*" />
+
+                        <ColumnDefinition Width="2*" />
+
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" Name="SearchPanel" >
+                        <Grid
+                                    Width="200"
+                                    Height="30"
+                                    Margin="0,0,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Background="White">
+                            <!--  overlay with hint text  -->
+
+                            <TextBlock
+                                        Name="txt_search11"
+                                        Width="200"
+                                        Height="30"
+                                        Padding="5,10"
+                                        VerticalAlignment="Center"
+                                        FontSize="11"
+                                        Foreground="#777A7D"
+                                        Text="Enter User Id"
+                                        TextAlignment="Left" />
+
+                            <!--  enter term here  -->
+                            <TextBox
+                                        Name="txt_search1"
+                                        Width="200"
+                                        Height="30"
+                                        Padding="5,5"
+                                        Background="Transparent"
+                                        GotFocus="txt_search11_GotFocus"
+                                LostFocus="txt_search1_LostFocus"
+                                        TextChanged="Txt_chnged_ItemSo_reset" />
+
+                        </Grid>
+                        <Button
+                                    Margin="10,0,0,0"
+                                    Padding="25,9"
+                                    HorizontalAlignment="Right"
+                                    Content="Search"
+                            Click="btnSearch_Click"
+                                    Style="{StaticResource 3DButtonStyle}" />
+                        <ComboBox
+                                    Name="dptCombo"
+                                    Width="150"
+                                    Height="30"
+                                    Margin="10,10,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Background="White"
+                                    BorderBrush="White"
+                                    IsEditable="True"
+                                    IsEnabled="False"
+                                    IsReadOnly="True"
+                                    SelectionChanged="dptCombo_SelectionChanged"
+                                    Text="---Select Dpt---" />
+                        <CheckBox
+                            Name="dptCheckbox"
+                                    VerticalContentAlignment="Center"
+                                    Checked="RadioButton_Checked"
+                                    FontSize="16"
+                                    Unchecked="RadioButton_Unchecked">
+                            Deparmtent
+                        </CheckBox>
+                        <Grid
+                                    Width="30"
+                                    Height="30"
+                                    MouseDown="rel_up_list">
+                            <Image
+                                        Name="AddUser"
+                                        Grid.Column="2"
+                                        Width="30"
+                                        Height="30"
+                                        Margin="0,0,0,0"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\refresh.png" />
+                                </Image.Source>
+                            </Image>
+                        </Grid>
+                    </StackPanel>
+
+
+                    <!--<TextBox
+                                x:Name="txt_search1"
+                                Grid.Column="0"
+                                Width="auto"
+                                Height="30"
+                                Margin="0,0,0,0"
+                                FontSize="12"
+                                Foreground="Black"
+                                Text=""
+                                TextChanged="Txt_chnged_ItemSo_reset" />-->
+
+                    <!--<Image
+                                Name="U_Wait"
+                                Grid.Column="1"
+                                Width="auto"
+                                Height="auto"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Visibility="Visible">
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Images\waitsand.png" />
+                                </Image.Source>
+                            </Image>-->
+
+                    <StackPanel
+                                Grid.Column="3"
+                                HorizontalAlignment="Right"
+                                Orientation="Horizontal">
+                        <!--<CheckBox
+                                    x:Name="faceUp"
+                                    HorizontalAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    FontSize="20">
+                            Face
+                        </CheckBox>
+                        <CheckBox
+                                    x:Name="fingUp"
+                                    Margin="5,0,0,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    FontSize="20">
+                            Finger
+                        </CheckBox>
+                        <CheckBox
+                                    x:Name="cardUp"
+                                    Margin="5,0"
+                                    HorizontalAlignment="Left"
+                                    VerticalContentAlignment="Center"
+                                    FontSize="20">
+                            Card
+                        </CheckBox>-->
+                        <Button
+                                    Padding="25,9"
+                            Name="btnSync"
+                                    HorizontalAlignment="Left"
+                                    Click="Upload_to_device_Click"
+                                    Content="Start Sync"
+                                    Style="{StaticResource 3DButtonStyle}" />
+                        <Image
+                                    Name="U_Wait"
+                                    Grid.Column="1"
+                                    Width="auto"
+                                    Height="auto"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Visibility="Collapsed">
+                            <Image.Source>
+                                <BitmapImage UriSource="..\Images\waitsand.png" />
+                            </Image.Source>
+                        </Image>
+
+
+                    </StackPanel>
+
+
+
+                </Grid>
+
+                <Grid Grid.Row="0" Height="auto">
+
+
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="6*" />
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel Grid.Column="0">
+                        <Border
+                                    Height="auto"
+                                    BorderBrush="{StaticResource VISION}"
+                                    BorderThickness="1"
+                                    CornerRadius="5"
+                                    RenderTransformOrigin="0.5,0.5">
+
+
+                            <StackPanel>
+                                <Grid Visibility="Hidden">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+
+                                    </Grid.ColumnDefinitions>
+                                    <!--  This is the hidden helper Field which is used to bind to, using the "Fill" column of the helper grid  -->
+                                    <Grid x:Name="dbc0" Grid.Column="0" />
+                                    <Grid x:Name="dbc1" Grid.Column="1" />
+                                    <Grid x:Name="dbc2" Grid.Column="2" />
+                                    <Grid x:Name="dbc3" Grid.Column="3" />
+                                    <Grid x:Name="dbc4" Grid.Column="4" />
+
+                                </Grid>
+                                <ListView
+                                            x:Name="dbuserlist"
+                                            Height="336"
+                                            MaxHeight="336"
+                                            Margin="0,0,4,0"
+                                            VerticalAlignment="Top"
+                                            VerticalContentAlignment="Top"
+                                            Background="Transparent"
+                                            FontSize="20"
+                                    Loaded="UsersListView_Loaded"
+                                            Foreground="Black"
+                                            ItemsSource="{Binding Udown_Disp1}"
+                                            ScrollViewer.CanContentScroll="True"
+                                            ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                            ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                            SelectionMode="Multiple">
+                                    <ListView.Resources>
+                                        <Style TargetType="{x:Type ListViewItem}">
+                                            <Setter Property="Height" Value="0" />
+
+                                        </Style>
+                                    </ListView.Resources>
+
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListViewItem}">
+
+                                            <Setter Property="IsSelected" Value="{Binding SomeItemSelected, Mode=TwoWay}" />
+
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="{StaticResource HIK}" />
+                                                    <Setter Property="Focusable" Value="True" />
+
+
+                                                </Trigger>
+
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter Property="Background" Value="{StaticResource HIK}" />
+
+                                                </Trigger>
+
+                                            </Style.Triggers>
+                                        </Style>
+
+
+                                    </ListView.ItemContainerStyle>
+
+                                    <ListView.View>
+
+                                        <GridView>
+                                            <GridView.ColumnHeaderContainerStyle>
+                                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                                                                <Border
+                                                                            Background="Transparent"
+                                                                            BorderBrush="Black"
+                                                                            BorderThickness="0,0,0,0">
+                                                                    <TextBlock
+                                                                                x:Name="ContentHeader"
+                                                                                Width="{TemplateBinding Width}"
+                                                                                Padding="0,5,5,5"
+                                                                                Text="{TemplateBinding Content}"
+                                                                                TextAlignment="Left" />
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                                                    <Setter Property="Foreground" Value="{StaticResource FREE}" />
+                                                    <Setter Property="FontFamily" Value="Champagne &amp; Limousines" />
+                                                    <Setter Property="FontSize" Value="12" />
+                                                    <Setter Property="FontWeight" Value="Bold" />
+                                                    <Setter Property="Background" Value="AliceBlue" />
+                                                    <Setter Property="BorderBrush" Value="BlanchedAlmond" />
+                                                    <Setter Property="BorderThickness" Value="2" />
+
+                                                </Style>
+                                            </GridView.ColumnHeaderContainerStyle>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=dbc0}" Header="Sr">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding SrNo}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=dbc1}" Header="Device ID">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding EMachineNumber}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=dbc2}" Header="User ID">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding EnrollNumber}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=dbc3}" Header="UserName">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding EName}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <!--<GridViewColumn
+                                                        x:Name="dbface_C"
+                                                        Width="153"
+                                                        Header="Type">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding type}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>-->
+
+
+                                        </GridView>
+                                    </ListView.View>
+
+                                </ListView>
+                            </StackPanel>
+
+
+
+
+                        </Border>
+
+                    </StackPanel>
+                    <Grid Grid.Column="1" Height="auto" Name="SelectionGrid">
+                        <Border
+                                    Height="auto"
+                                    BorderBrush="{StaticResource VISION}"
+                                    BorderThickness="2"
+                                    CornerRadius="1"
+                                    RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform AngleX="-0.14" />
+                                    <RotateTransform />
+                                    <TranslateTransform X="-0.331" />
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                            <StackPanel
+                                        Grid.Column="1"
+                                        Height="300"
+                                        VerticalAlignment="Bottom"
+                                        Orientation="Vertical">
+
+
+
+                                <Image
+                                            Name="Arrowb"
+                                            Width="50"
+                                            Height="30"
+                                            Margin="0,30,0,0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Bottom"
+                                            MouseDown="MoveSelectedRight"
+                                            RenderTransformOrigin="0.5,0.5">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="..\Images\reply.png" />
+                                    </Image.Source>
+                                    <Image.RenderTransform>
+                                        <ScaleTransform ScaleX="-1" />
+                                    </Image.RenderTransform>
+                                </Image>
+                                <!--<materialDesign:PackIcon  RenderTransformOrigin="0.5,0.5"
+                                            Margin="12,0"
+                                Height="30"
+                                Width="50"
+                                x:Name="Arrowb"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="Reply" MouseDown="MoveSelectedRight"    >
+                                            <materialDesign:PackIcon.RenderTransform>
+                                                <ScaleTransform ScaleX="-1" />
+                                            </materialDesign:PackIcon.RenderTransform>
+                                        </materialDesign:PackIcon>-->
+
+
+                                <Image
+                                            Name="DoubleArrowb"
+                                            Width="50"
+                                            Height="30"
+                                            Margin="0,30,0,0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Bottom"
+                                            MouseDown="MoveAllRight"
+                                            RenderTransformOrigin="0.5,0.5">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="..\Images\reply_all.png" />
+                                    </Image.Source>
+                                    <Image.RenderTransform>
+                                        <ScaleTransform ScaleX="-1" />
+                                    </Image.RenderTransform>
+                                </Image>
+                                <!--<materialDesign:PackIcon  RenderTransformOrigin="0.5,0.5"
+                                            Margin="0,40,0,0"
+                                Height="30"
+                                Width="50"
+                                x:Name="DoubleArrowb"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="ReplyAll" MouseDown="MoveAllRight"    >
+                                            <materialDesign:PackIcon.RenderTransform>
+                                                <ScaleTransform ScaleX="-1" />
+                                            </materialDesign:PackIcon.RenderTransform>
+                                        </materialDesign:PackIcon>-->
+
+
+
+                                <Image
+                                            Name="Arrowf"
+                                            Width="50"
+                                            Height="30"
+                                            Margin="0,30,0,0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Bottom"
+                                            MouseDown="MoveSelectedBack">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="..\Images\reply.png" />
+                                    </Image.Source>
+                                </Image>
+                                <!--<materialDesign:PackIcon
+                                            Margin="0,30,0,0"
+                                Height="30"
+                                Width="50"
+                                x:Name="Arrowf"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="Reply" MouseDown="MoveSelectedBack"   />-->
+
+                                <Image
+                                            Name="doubleArrowf"
+                                            Width="50"
+                                            Height="30"
+                                            Margin="0,30,0,0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Bottom"
+                                            MouseDown="MoveAllBack">
+                                    <Image.Source>
+                                        <BitmapImage UriSource="..\Images\reply_all.png" />
+                                    </Image.Source>
+                                </Image>
+                                <!--<materialDesign:PackIcon
+                                            Margin="0,30,0,0"
+                                Height="30"
+                                Width="50"
+                                x:Name="doubleArrowf"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Bottom"
+                            Foreground="{StaticResource HIK}"
+                            Kind="ReplyAll" MouseDown="MoveAllBack"   />-->
+
+
+
+
+
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <StackPanel Grid.Column="2">
+                        <Border
+                                    Height="auto"
+                                    BorderBrush="{StaticResource VISION}"
+                                    BorderThickness="1"
+                                    CornerRadius="5"
+                                    RenderTransformOrigin="0.5,0.5">
+
+
+
+                            <StackPanel
+                                        Height="336"
+                                        Margin="0,0,0,0"
+                                        HorizontalAlignment="Stretch">
+                                <!--  This is the hidden helper Grid which does the resizing  -->
+                                <Grid Visibility="Hidden">
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="0.65*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1.1*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <!--  This is the hidden helper Field which is used to bind to, using the "Fill" column of the helper grid  -->
+                                    <Grid x:Name="rc0" Grid.Column="0" />
+                                    <Grid x:Name="rc1" Grid.Column="1" />
+                                    <Grid x:Name="rc2" Grid.Column="2" />
+                                    <Grid x:Name="rc3" Grid.Column="3" />
+                                    <Grid x:Name="rc4" Grid.Column="4" />
+                                    <Grid x:Name="rc5" Grid.Column="5" />
+                                    <Grid x:Name="rc6" Grid.Column="6" />
+                                    <Grid x:Name="rc7" Grid.Column="7" />
+                                </Grid>
+
+                                <!--<ListView
+                                            x:Name="selecteduserlist"
+                                            Height="336"
+                                            MaxHeight="336"
+                                            Margin="0,0,4,0"
+                                            VerticalAlignment="Top"
+                                            VerticalContentAlignment="Top"
+                                            Background="Transparent"
+                                            FontSize="20"
+                                            Foreground="Black"
+                                            ItemsSource="{Binding Udown_Disp}"
+                                            ScrollViewer.CanContentScroll="True"
+                                            ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                            ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                            SelectionMode="Multiple">
+                                    <ListView.Resources>
+                                        <Style TargetType="{x:Type ListViewItem}">
+                                            <Setter Property="Height" Value="0" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsSynchronized}" Value="True">
+                                                    <Setter Property="Background" Value="Green" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsSynchronized}" Value="False">
+                                                    <Setter Property="Background" Value="#80FF0000" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ListView.Resources>
+
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListViewItem}">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="{StaticResource HIK}" />
+                                                    <Setter Property="Focusable" Value="True" />
+
+                                                </Trigger>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter Property="Background" Value="{StaticResource HIK}" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+
+
+                                    </ListView.ItemContainerStyle>
+
+                                    <ListView.View>
+
+                                        <GridView>
+                                            <GridView.ColumnHeaderContainerStyle>
+                                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                                                                <Border
+                                                                            Background="Transparent"
+                                                                            BorderBrush="Black"
+                                                                            BorderThickness="0,0,0,0">
+                                                                    <TextBlock
+                                                                                x:Name="ContentHeader"
+                                                                                Width="{TemplateBinding Width}"
+                                                                                Padding="0,5,5,5"
+                                                                                Text="{TemplateBinding Content}"
+                                                                                TextAlignment="Left" />
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                                                    <Setter Property="Foreground" Value="{StaticResource FREE}" />
+                                                    <Setter Property="FontFamily" Value="Champagne &amp; Limousines" />
+                                                    <Setter Property="FontSize" Value="12" />
+                                                    <Setter Property="FontWeight" Value="Bold" />
+                                                    <Setter Property="Background" Value="AliceBlue" />
+                                                    <Setter Property="BorderBrush" Value="BlanchedAlmond" />
+                                                    <Setter Property="BorderThickness" Value="2" />
+
+                                                </Style>
+                                            </GridView.ColumnHeaderContainerStyle>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc0}" Header="Sr">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding SrNo}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc1}" Header="Device ID">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding EMachineNumber}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc2}" Header="User ID">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding EnrollNumber}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc3}" Header="UserName">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding EName}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            --><!--<GridViewColumn Width="{Binding ActualWidth, ElementName=rc4}" Header="Name">
+                                                        <GridViewColumn.CellTemplate>
+                                                            <DataTemplate>
+                                                                <TextBlock
+                                            Padding="0"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                            <Label
+                                                                                Padding="0"
+                                                                                Content="{Binding EnrollNumber}"
+                                                                                FontSize="12" />
+                                                                        </InlineUIContainer></TextBlock>
+                                                            </DataTemplate>
+                                                        </GridViewColumn.CellTemplate>
+                                                    </GridViewColumn>-->
+
+                                            <!--<GridViewColumn
+                                                        x:Name="face_r"
+                                                        Width="76"
+                                                        Header="Type">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding type}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>--><!--
+
+                                            <GridViewColumn Width="0" Header="Privilige">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding Privilige}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="0" Header="Password">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock
+                                                                    Padding="0"
+                                                                    HorizontalAlignment="Stretch"
+                                                                    VerticalAlignment="Stretch"><InlineUIContainer>
+                                                                        <Label
+                                                                            Padding="0"
+                                                                            Content="{Binding enPassword}"
+                                                                            FontSize="12" />
+                                                                    </InlineUIContainer></TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+
+
+                                        </GridView>
+                                    </ListView.View>
+
+                                </ListView>-->
+                                <ListView x:Name="selecteduserlist"
+                                    Height="336"
+                                    MaxHeight="336"
+                                    Margin="0,0,4,0"
+                                    VerticalAlignment="Top"
+                                    VerticalContentAlignment="Top"
+                                    Background="Transparent"
+                                    FontSize="20"
+                                    Foreground="Black"
+                                    ItemsSource="{Binding Udown_Disp}"
+                                    ScrollViewer.CanContentScroll="True"
+                                    ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                                    ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                    SelectionMode="Multiple">
+
+                                    <ListView.ItemContainerStyle>
+                                        <Style TargetType="{x:Type ListViewItem}">
+                                            <Setter Property="Background" Value="Transparent" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsSynchronized}" Value="True">
+                                                    <Setter Property="Background" Value="#39e75f" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsSynchronized}" Value="Null">
+                                                    <Setter  Property="Background" Value="Transparent"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsSynchronized}" Value="False">
+                                                    <Setter Property="Background" Value="#80FF0000" />
+                                                </DataTrigger>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Background" Value="{StaticResource HIK}" />
+                                                    <Setter Property="Focusable" Value="True" />
+                                                </Trigger>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter Property="Background" Value="{StaticResource HIK}" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ListView.ItemContainerStyle>
+
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridView.ColumnHeaderContainerStyle>
+                                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                                    <Setter Property="Template">
+                                                        <Setter.Value>
+                                                            <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                                                                <Border Background="Transparent" BorderBrush="Black" BorderThickness="0,0,0,0">
+                                                                    <TextBlock x:Name="ContentHeader" Width="{TemplateBinding Width}" Padding="0,5,5,5" Text="{TemplateBinding Content}" TextAlignment="Left" />
+                                                                </Border>
+                                                            </ControlTemplate>
+                                                        </Setter.Value>
+                                                    </Setter>
+                                                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                                                    <Setter Property="Foreground" Value="{StaticResource FREE}" />
+                                                    <Setter Property="FontFamily" Value="Champagne &amp; Limousines" />
+                                                    <Setter Property="FontSize" Value="12" />
+                                                    <Setter Property="FontWeight" Value="Bold" />
+                                                    <Setter Property="Background" Value="AliceBlue" />
+                                                    <Setter Property="BorderBrush" Value="BlanchedAlmond" />
+                                                    <Setter Property="BorderThickness" Value="2" />
+                                                </Style>
+                                            </GridView.ColumnHeaderContainerStyle>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc0}" Header="Sr">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <InlineUIContainer>
+                                <Label Padding="0" Content="{Binding SrNo}" FontSize="12" />
+                            </InlineUIContainer>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc1}" Header="Device ID">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <InlineUIContainer>
+                                <Label Padding="0" Content="{Binding EMachineNumber}" FontSize="12" />
+                            </InlineUIContainer>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc2}" Header="User ID">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <InlineUIContainer>
+                                <Label Padding="0" Content="{Binding EnrollNumber}" FontSize="12" />
+                            </InlineUIContainer>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="{Binding ActualWidth, ElementName=rc3}" Header="UserName">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <InlineUIContainer>
+                                <Label Padding="0" Content="{Binding EName}" FontSize="12" />
+                            </InlineUIContainer>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="0" Header="Privilige">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <InlineUIContainer>
+                                <Label Padding="0" Content="{Binding Privilige}" FontSize="12" />
+                            </InlineUIContainer>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="0" Header="Password">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Padding="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <InlineUIContainer>
+                                <Label Padding="0" Content="{Binding enPassword}" FontSize="12" />
+                            </InlineUIContainer>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+
+
+                </Grid>
+
+
+
+            </Grid>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>
